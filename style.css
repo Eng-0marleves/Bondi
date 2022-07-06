@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.main-btn {
+    background: var(--red-color);
+    padding: .5rem 1rem;
+}
+.main-btn:hover {
+    background: var(--yellow-color);
+    color: var(--red-color);
+}
+.main-title::after {
+    content: " ";
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 125px;
+    height: 2px;
+    background: #33d1cc;
+}
+
+/* Nav Style Start */
+nav {
+    background: var(--dark-color);
+}
+.nav-link {
+    color: #fff;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover  {
+    color: var(--green-color);
+}
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search i{
+    color: var(--green-color);
+    cursor: pointer;
+}
+.navbar-toggler {
+    color: #fff;
+    font-size: 25px;
+    border-color: #fff;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-toggler[aria-expanded = "true"] {
+    border-color: var(--green-color);
+}
+/* Nav Style End */
+
+
+/* Start Landing */
+.landing {
+    margin-top: 70px;
+    background: var(--dark-color);
+    min-height: calc(100vh - 70px);
+}
+/* End Landing */
+
+
+/* Start features */
+.features .icon-holder {
+    height: 200px;
+}
+.features .icon-holder i {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder .icon {
+    color: var(--green-color );
+    transform: translate(-50%,200%);
+}
+.features h4 {
+    color: var(--yellow-color);
+}
+/* End features */
+
+
+/* Start our_work */
+.our_work {
+    background: var(--section-color);
+}
+.our_work ul .active {
+    background: var(--red-color);
+    color: #fff;
+}
+.our_work ul li {
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+.our_work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+.our_work .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our_work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background: #33d1ccc0;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    transform: scale(0);
+}
+.our_work .box:hover::before {
+    transform: scale(1);
+}
+/* End our_work */
+
+
+/* Start stuff */
+.stuff {
+    overflow: hidden;
+}
+.stuff .description {
+    width: 500px;
+}
+/* End stuff */
+
+
+/* Start team */
+.team {
+    background: var(--section-color);
+}
+.team h2 {
+    color: var(--yellow-color);
+}
+.team .box h4 {
+    background: var(--green-color);
+}
+/* End team */
+
+
+/* Start Project */
+.project {
+    background: var(--dark-color);
+}
+/* End Project */
+
+
+/* Start Subscribe */
+.subscribe {
+    background: var(--yellow-color);
+    align-items: center;
+}
+.subscribe input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+.subscribe input[type="text"]:focus {
+    outline: none;
+}
+.subscribe ::placeholder {
+    color: #fff; 
+}
+.subscribe input[type="submit"] {
+    background: var(--dark-color);
+    color: var(--yellow-color);
+}
+/* End Subscribe */
+
+
+/* Start footer */
+.footer {
+    background: var(--dark-color);
+    color: #fff;
+}
+.footer ul li a {
+    color: rgba(255, 255, 255, 0.384);
+}
+.footer .copyright span {
+    color: var(--green-color);
+}
+.footer .copyright div span {
+    color: var(--yellow-color);
+}
+.footer .contact ul i {
+    width: 20px;
+    height: 20px;
+}
+.footer ul li a .facebook {
+    background:  #1877f2;
+}
+.footer ul li a .twitter {
+    background:  #1da1f2;
+}
+.footer ul li a .linkedin {
+    background:  #0077b5;
+}
+.footer ul li a .youtube {
+    background:  #ff0000;
+}
+/* End footer */
